@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to top left, green, lightgreen);
+    height: 100vh;
+}
+
+.full-width {
+    height: 100vh;
+}
+
+.main-box {
+    background-color: rgba(240, 248, 255, 0.6);
+    border-radius: 12px;
+    position: relative;
+}
+
+.current {
+    background-color: rgb(0, 154, 103);
+    border-radius: 15px;
+    padding: 12px;
+    color: white;
+    width: 200px;
+}
+
+.current-text {
+    font-size: 1rem;
+}
+
+.player1,
+.player2 {
+    text-align: center;
+    padding: 4rem;
+
+
+}
+
+.score {
+    margin-bottom: 8rem;
+    font-size: 5rem;
+    color: rgb(0, 119, 79);
+    font-weight: 400;
+}
+
+
+
+
+.act {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+
+
+
+.btnn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: azure;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.dice {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-box-shadow: 9px 12px 21px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 9px 12px 21px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 9px 12px 21px 0px rgba(0, 0, 0, 0.2);
+}
+
+.rolldice {
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.newgame {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.dicehold {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.win-status {
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+.modal-cont {
+    width: 35rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    z-index: 20;
+    border-radius: 7px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.582);
+    z-index: 15;
+    backdrop-filter: blur(3px);
+}
+
+.hide-rules{
+    display: none;
+}
+
+.game-ins{
+    text-align: left;
+    font-size: .9rem;
+}
+
+.game-rules{
+    color: rgb(0, 65, 0);
+    margin-bottom: 20px;
+}
+
+ /* Modal form */
+
+.modal-form{
+    width: 22rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    z-index: 20;
+    border-radius: 7px;
+}
+
+.player-input{
+    border: none;
+    width: 80%;
+    margin-bottom: 8px;
+}
+
+.player-input:focus{
+    border: none;
+    outline: none;
+}
+
+hr{
+    margin: 0;
+    width: 80%;
+    
+}
+
+.playernamesform{
+    margin-bottom: 30px;
+}
+
+.play-ok{
+    background-color: rgb(44, 122, 93);
+}
+
+.play-skip{
+    margin: 10px;
+}
+
+.play{
+    border: none;
+    padding: .4rem 1.4rem;
+    border-radius: 7px;
+    margin-top: 20px;
+    color: white;
+}
+
+.form-hide{
+    display: none;
+}
+
+/* Modal win */
+
+.modal-win{
+    width: 30rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to top right,rgb(218, 251, 188),rgb(255, 255, 255));
+    padding: 2rem 5rem;
+    text-align: center;
+    z-index: 20;
+    border-radius: 7px;
+}
+
+.popup{
+    margin: 0;
+}
+
+.win-hide{
+    display: none;
+}
+
+.play-again{
+    background-color: rgb(64, 148, 117);
+}
+
+.new-game{
+    background-color: rgb(121, 121, 121);
+}
+
+.exit,.bi-box-arrow-right{
+    margin: 0;
+    font-weight: 700;
+    margin-right:5px;
+    color: rgba(3, 77, 0, 0.732);
+    font-size: large;
+    cursor: pointer;
+}
+
+
+.exit-warning{
+    width: 30rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    z-index: 22;
+    border-radius: 7px;
+}
+
+.exit-ok,.new-start-game-ok{
+    background-color: rgb(44, 122, 93);
+}
+
+
+
+.cross-icon{
+    scale: 1.8;
+    position: absolute;
+    top:5px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal-new-start{
+    width: 30rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    z-index: 22;
+    border-radius: 7px;
+}
+
+.err{
+    color: red;
+    font-size: .7rem;
+    margin-bottom: 20px;
+    margin-left:30px;
+}
+
+.err-2{
+    text-align: left;
+}
+
+.err-hide{
+    display: none;
+}
