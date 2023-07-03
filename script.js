@@ -22,26 +22,24 @@ const errplayer1 = document.querySelector('.errplayer1');
 
 const errplayer2 = document.querySelector('.errplayer2');
 
-player1Name.addEventListener('change',()=>{
-    if(!player1Name.value.trim()=='')
-    {
-        if(!errplayer1.classList.contains('err-hide'))
+player1Name.addEventListener('change', () => {
+    if (!player1Name.value.trim() == '') {
+        if (!errplayer1.classList.contains('err-hide'))
             errplayer1.classList.add('err-hide');
     }
-    else{
-        if(errplayer1.classList.contains('err-hide'))
+    else {
+        if (errplayer1.classList.contains('err-hide'))
             errplayer1.classList.remove('err-hide');
     }
 })
 
-player2Name.addEventListener('change',()=>{
-    if(!player2Name.value.trim()=='')
-    {
-        if(!errplayer2.classList.contains('err-hide'))
+player2Name.addEventListener('change', () => {
+    if (!player2Name.value.trim() == '') {
+        if (!errplayer2.classList.contains('err-hide'))
             errplayer2.classList.add('err-hide');
     }
-    else{
-        if(errplayer2.classList.contains('err-hide'))
+    else {
+        if (errplayer2.classList.contains('err-hide'))
             errplayer2.classList.remove('err-hide');
     }
 })
@@ -180,15 +178,22 @@ playOk.addEventListener('click', () => {
         document.querySelector('.modal-form').classList.add('form-hide');
         document.querySelector('.overlay').classList.add('form-hide');
     }
-    else{
-        if(player1Name.value.trim() == '')
-        {
-          errplayer1.classList.remove('err-hide');
-
+    else {
+        if (!player1Name.value.trim() == '') {
+            if (!errplayer1.classList.contains('err-hide'))
+                errplayer1.classList.add('err-hide');
         }
-        else
-        {
-            errplayer2.classList.remove('err-hide');
+        else {
+            if (errplayer1.classList.contains('err-hide'))
+                errplayer1.classList.remove('err-hide');
+        }
+        if (!player2Name.value.trim() == '') {
+            if (!errplayer2.classList.contains('err-hide'))
+                errplayer2.classList.add('err-hide');
+        }
+        else {
+            if (errplayer2.classList.contains('err-hide'))
+                errplayer2.classList.remove('err-hide');
         }
     }
 })
@@ -221,25 +226,24 @@ newGame.addEventListener('click', () => {
     document.querySelector('.modal-new-start').classList.remove('form-hide');
 });
 
-exitButton.addEventListener('click',()=>{
+exitButton.addEventListener('click', () => {
     document.querySelector('.overlay').classList.remove('form-hide');
     document.querySelector('.exit-warning').classList.remove('form-hide');
 })
 
-for(let i =0;i<existNo.length;i++)
-{
-    existNo[i].addEventListener('click',()=>{
+for (let i = 0; i < existNo.length; i++) {
+    existNo[i].addEventListener('click', () => {
         document.querySelector('.overlay').classList.add('form-hide');
-    document.querySelector('.exit-warning').classList.add('form-hide');
+        document.querySelector('.exit-warning').classList.add('form-hide');
     })
 }
 
 
-existOk.addEventListener('click',()=>{
+existOk.addEventListener('click', () => {
     location.reload();
 })
 
-startNewGameOk.addEventListener('click',()=>{
+startNewGameOk.addEventListener('click', () => {
     document.querySelector('.modal-new-start').classList.add('form-hide');
     document.querySelector('.modal-form').classList.remove('form-hide');
     playagain();
@@ -249,9 +253,8 @@ startNewGameOk.addEventListener('click',()=>{
 
 
 
-for(let i =0;i<startNewGameNo.length;i++)
-{
-    startNewGameNo[i].addEventListener('click',()=>{
+for (let i = 0; i < startNewGameNo.length; i++) {
+    startNewGameNo[i].addEventListener('click', () => {
         document.querySelector('.overlay').classList.add('form-hide');
         document.querySelector('.modal-new-start').classList.add('form-hide');
     })
